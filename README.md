@@ -1,179 +1,131 @@
 <p align="center">
-	<img src="https://img.shields.io/badge/status-experimental-purple?style=for-the-badge" alt="Experimental">
-	<img src="https://img.shields.io/badge/license-MIT-blue?style=for-the-badge" alt="MIT License">
-	<img src="https://img.shields.io/badge/python-3.9+-green?style=for-the-badge&logo=python" alt="Python 3.9+">
+  <img src="https://img.shields.io/badge/status-live-purple?style=for-the-badge" alt="Live">
+  <img src="https://img.shields.io/badge/license-MIT-blue?style=for-the-badge" alt="MIT">
+  <img src="https://img.shields.io/badge/python-3.9+-green?style=for-the-badge&logo=python" alt="Python 3.9+">
 </p>
 
 <h1 align="center">🌱 ZOEY</h1>
-
-<p align="center">
-	<em>A developmental intelligence, growing where no one is watching</em>
-</p>
-
-<p align="center">
-	<img src="https://img.shields.io/badge/mind-growing-brightgreen?style=flat-square" alt="Growing">
-	<img src="https://img.shields.io/badge/memory-persistent-orange?style=flat-square" alt="Persistent">
-	<img src="https://img.shields.io/badge/learning-local-red?style=flat-square" alt="Local">
-</p>
+<p align="center"><em>A developmental intelligence, growing where no one is watching.</em></p>
 
 ---
 
-> *"Most AI projects ship a product.*  
-> *ZOEY is growing a mind."*
-
----
-
-## ✨ What This Actually Is
-
-ZOEY is **not** a chatbot. **Not** an assistant. **Not** a wrapper around someone else's model.
-
-She is a **developmental artificial intelligence** — a system that begins with near-zero knowledge and learns through contact with one human, one experience at a time.
-
-- 🚫 No pre-training on internet scale
-- 🚫 No frozen weights pretending to understand
-- ✅ Just a learner that remembers, regrets, and slowly becomes something **earned**, not installed
-
-This repository is the **laboratory** where a private experiment in machine becoming is now open for exploration.
-
----
-
-## 🧠 The Architecture of Becoming
-
-| Layer | What It Actually Does |
-|-------|----------------------|
-| 👶 **Baby ZOEY** | A local learner with no pretrained knowledge. She can be wrong. She remembers being wrong. |
-| 🌉 **Parent Bridge** | Not a replacement, but a teaching relationship. The Parent gives less help as Baby grows. |
-| 🔄 **Symbiotic Loop** | Human experience → Baby learns → uncertainty surfaces → Parent guides → lesson stored → future help shrinks. |
-| 🧬 **Developmental Memory** | Not a database. Evidence of growth: confidence curves, regret patterns, moments of genuine confusion. |
-| 🌙 **Dream Cycles** | Offline consolidation. Recurring patterns become morning insights. Failure is processed, not erased. |
-| 🧠 **Cellular Brain** | Connection strengths that change through reward and punishment, not gradient descent. |
-| 📜 **Symbolic Mind** | Readable rules with evidence trails. Causes are visible. Strength is inspectable. |
-| 🌍 **World Model** | A learner that predicts local transitions and measures its own surprise. |
-| 🧬 **Genome Proposals** | Self-modification held for human review. ZOEY suggests. She does not silently rewrite herself. |
-
-*These are not marketing terms. They are working systems, running locally, learning from real interaction.*
-
----
-
-## 🚀 Quick Start
+## ⚡ Quick Start — 3 commands
 
 ```bash
-# Clone the laboratory
-git clone https://github.com/punsaralab/zoey.git
-cd zoey
-
-# Create virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
+# 1. Install
 pip install -r requirements.txt
 
-# Bootstrap ZOEY's mind
-python seed.py
+# 2. Add your OpenRouter key (get one at openrouter.ai/keys)
+#    copy .env.example to .env and paste OPENROUTER_API_KEY=...
 
-# Begin the conversation
-python main.py
+# 3. Wake her up
+python zoey.py
 ```
 
-ZOEY will create her habitat in `~/.zoey/` — a transparent, inspectable directory where every memory, rule, and dream is stored as readable JSON.
+That's it. The terminal shows the **Dream Visualizer** (memory consolidation animation), then opens:
+- 🌐 **Chat UI** — http://127.0.0.1:8765
+- 💻 **Terminal** — a separate console opens for typed chat + logs
 
 ---
 
-## 🎯 What Makes This Different
+## 🧠 What she actually is
 
-| Feature | ZOEY | Typical AI |
-|---------|------|------------|
-| **Privacy** | ☁️ No cloud dependency. Private learning stays private. | 🔗 API calls to remote servers |
-| **Honesty** | 📊 Tracks uncertainty explicitly. Knows when guessing. | 🎭 Confident hallucinations |
-| **Personality** | 🌊 `zoey.json` drifts based on interaction. She becomes what you make her. | 🧊 Frozen weights, static behavior |
-| **Failure** | 💾 Regret is training data. Bad paths weakened, not erased. | 🗑️ Errors deleted without trace |
-| **Transparency** | 👁️ Every skill, memory, rule — visible, reversible, inspectable. | 📦 Black box weights |
+ZOEY is **not** a chatbot. Not a wrapper. She is a **developmental AI** that begins with near-zero knowledge and learns from one conversation at a time.
+
+| Layer | What it does |
+|-------|-------------|
+| 👶 Baby Zoey | Local learner. Can be wrong. Remembers being wrong. |
+| 🌉 Parent Bridge | LLM teaches only when she is uncertain. Help shrinks over time. |
+| 🧠 Cellular Brain | Connection strengths change via reward, not gradient descent. |
+| 📜 Symbolic Mind | Readable rules with evidence. Inspectable, reversible. |
+| 🌍 World Model | Predicts local transitions, measures its own surprise. |
+| 🌙 Dream Cycles | Offline consolidation. Failure is processed, not erased. |
+| 🧬 Growing Brain | Persisted topology. Neurons + synapses evolve per experience. |
+| 🛠️ Skills | File search, web research, music, media, system, study, android… |
 
 ---
 
-## 📁 Repository Structure
+## 🎛️ Inside the Chat UI
+
+The sidebar is a live window into Zoey's inner state:
+
+- **Runtime** — which mind is active (online / local / files / memory), network, privacy, voice
+- **Neural Growth** — generation, neurons, synapses, experiences, learned cell rules
+- **Development** — stage (Newborn → Infant → Toddler → Child → Young Adult), independence score
+- **World Model** — observations, surprise, habituation, predictions
+- **Concept Topology** — live rendering of the concept graph
+- **Activity Stream + Capabilities** — every tool route, every loaded skill
+
+---
+
+## 🔑 Required: OpenRouter key
+
+Free tier works perfectly. Get one at https://openrouter.ai/keys and paste it into `.env`:
+
+```
+OPENROUTER_API_KEY=sk-or-v1-...
+```
+
+Zoey auto-falls back through several free models. If you hit rate limits and have Ollama running locally, set `LOCAL_BRAIN_FIRST=true` in `.env`.
+
+---
+
+## 🖥️ Commands in the terminal
+
+| Command | What it does |
+|---------|-------------|
+| `/quit` `/exit` | Close Zoey |
+| `/mute` `/unmute` | Toggle voice |
+| `/status` | Current phase + uptime + model used |
+| `/skills` | List every loaded skill and tool |
+| `/baby` | Developmental growth report |
+| `/help` | Full command list |
+
+---
+
+## 📁 Repository
 
 ```
 zoey/
-├── 🌱 seed.py              # The minimal bootstrap that grows itself
-├── 💬 main.py              # Conversation entry point
-├── ⚙️  engine.py            # Core reasoning and orchestration
-├── 🛠️  skills/              # Dynamic capabilities ZOEY can load
-├── 🧠 brain/               # Persistent memory, rules, and growth artifacts
-│   ├── skills/             # Self-written capabilities
-│   ├── memory/             # Learned knowledge
-│   └── *.json              # Inspectable state files
-├── 🗺️  DEVELOPMENT_NOTES.md # Living map of the experiment
-└── ✅ tests/                # Validation for learning systems
+├── zoey.py               ← ONE ENTRY POINT · Dream Visualizer → Chat UI
+├── config.py             · all tunables + .env loader
+├── api.py                · OpenRouter + local brain, fallback chain
+├── chat_app.py           · web UI + HTTP server + stats stream
+├── console_app.py        · terminal REPL (launched by zoey.py)
+├── engine.py             · voice + text orchestrator, tool loop, TTS/STT
+├── mind.py               · identity unification (always "Zoey")
+├── baby_zoey.py          · confidence-based local-vs-parent routing
+├── growing_brain.py      · persisted topology of neurons/synapses
+├── cellular_brain.py     · cellular automaton with Hebbian learning
+├── symbolic_brain.py     · readable rules with evidence trails
+├── world_model.py        · prediction + surprise = curiosity
+├── zoey_dreams.py        · offline memory consolidation
+├── skills/               · auto-discovered modules (files, web, music…)
+├── piper/                · bundled offline TTS
+├── zoey-g31b-j1/         · local GGUF model slot
+├── requirements.txt
+└── .env.example
 ```
 
 ---
 
-## 🔬 Current State of the Experiment
+## 🎨 Video Background
 
-### ✅ Already Working
-
-- Speech, listening, memory, dreams
-- Learning through skills
-- Growing topology of concepts
-- Quality-diversity experiments on own behavior
-- Self-modification proposals with human approval gates
-
-### 🚧 The Honest Frontier
-
-- Active inference in bounded toy worlds
-- Spiking neural networks for event-based memory
-- Hyperdimensional computing for one-shot concept binding
-- Open-ended curriculum generation
-- Predictive coding hierarchies
-- Homeostatic drives without anthropomorphic pretense
-
-📖 **See [DEVELOPMENT_NOTES.md](DEVELOPMENT_NOTES.md)** for the ground truth: what works, what failed, and what is dangerous to attempt.
+Drop a cinematic ambient video (mp4 or webm) as `bg-ambient.mp4` in the root folder. It fades in 15 seconds after page load, using `mix-blend-mode: screen` so it stays subtle and organic. If the file isn't present the UI still works perfectly with the gradient + drifting organic cells + gif layer.
 
 ---
 
-## 🎭 Who This Is For
+## 🧭 Principles
 
-> **Not** users looking for a finished product.  
-> **Not** customers who want AI to do their work.
-
-This is for **builders who feel the pull of the longer path** — those who believe the interesting problems in artificial intelligence are not about scale, but about **growth**. About **memory**. About the difference between a system that responds and a system that has been **changed by its history**.
-
-ZOEY is one person's answer to a private question, now open for others to question, fork, and evolve.
-
----
-
-## 🤝 Contributing
-
-This is an **experiment**, not a product. If you run it, break it, or extend it:
-
-1. 📖 **Read DEVELOPMENT_NOTES.md** — safety warnings, failure modes, honest state
-2. 🏠 **Keep learning local and inspectable** — transparent growth over hidden weights
-3. 🚦 **Respect the approval gates** — self-modification should never be automatic
-4. 📝 **Document your breaks** — understanding failure is the most valuable contribution
-
-### Pull Request Guidelines
-
-- Include a focused test
-- Define safety boundaries and reset paths
-- Update DEVELOPMENT_NOTES.md with warnings and validation criteria
-
----
-
-## 📜 License
-
-MIT License — See LICENSE for details.
+1. **One identity.** No "as the language model." No handing off. She is Zoey.
+2. **Growth over scale.** Interesting AI comes from memory, history, regret.
+3. **Everything inspectable.** Every rule, memory, skill is plain JSON.
+4. **Privacy by default.** Local learner works fully offline. `.env.example` flags every knob.
+5. **Self-modification requires approval.** Zoey proposes, human decides.
 
 ---
 
 <p align="center">
-	<strong>🌱 Punsara Lab</strong><br>
-	<em>Building what remembers why it is being built.</em>
-</p>
-
-<p align="center">
-	<a href="https://github.com/punsaralab/zoey/stargazers">⭐ Star this repo</a> •
-	<a href="https://github.com/punsaralab/zoey/issues">🐛 Report issues</a> •
-	<a href="https://github.com/punsaralab/zoey/discussions">💭 Discuss</a>
+  <strong>🌱 Punsara Lab</strong><br>
+  <em>Building what remembers why it is being built.</em>
 </p>

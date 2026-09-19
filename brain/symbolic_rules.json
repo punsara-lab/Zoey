@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "conditions": [
+        "consulted_parent"
+      ],
+      "action": "remember_parent_guidance",
+      "strength": 0.38,
+      "uses": 1,
+      "regrets": 0,
+      "last_reward": 0.9
+    }
+  ],
+  "experiences": 1,
+  "last_updated": 1789824963.3628614
+}

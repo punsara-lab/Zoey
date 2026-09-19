@@ -1,0 +1,13 @@
+openai
+sounddevice
+numpy
+faster-whisper
+pyttsx3
+requests
+playsound==1.2.2
+python-dotenv
+ddgs
+cactus-needle
+rich
+psutil
+cryptography

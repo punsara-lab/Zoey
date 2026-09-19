@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "generation": 1,
+  "neurons": [
+    {
+      "id": "input",
+      "kind": "input",
+      "label": "interaction"
+    },
+    {
+      "id": "output",
+      "kind": "output",
+      "label": "response"
+    }
+  ],
+  "connections": [],
+  "experiences": 1,
+  "last_reward": 0.85,
+  "last_updated": 1789824963.361404
+}
