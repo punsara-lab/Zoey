@@ -1,8 +1,17 @@
 import json
 import urllib.request
 
-# PASTE YOUR FRESH OPENROUTER KEY HERE DIRECTLY INSIDE THE QUOTES:
-API_KEY = "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"
+# PASTE YOUR FRESH OPENROUTER KEY HERE DIRECTLY INSIDE THE QUOTES,
+# or (better) set OPENROUTER_API_KEY in .env — zoey.py / engine.py / api.py
+# will load from there automatically.
+import os
+from dotenv import load_dotenv
+load_dotenv(override=True)
+API_KEY = (
+    os.environ.get("OPENROUTER_API_KEY")
+    or os.environ.get("OPENAI_API_KEY")
+    or ""
+).strip().strip('"').strip("'")
 
 # Clean any whitespace, newlines, or hidden quote marks
 API_KEY = API_KEY.strip().strip('"').strip("'").replace("\ufeff", "")
