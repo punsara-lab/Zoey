@@ -9,22 +9,38 @@
 
 ---
 
-## ⚡ Quick Start — 3 commands
+## ⚡ Quick Start
 
 ```bash
-# 1. Install
+# 1. Python deps
 pip install -r requirements.txt
 
-# 2. Add your OpenRouter key (get one at openrouter.ai/keys)
-#    copy .env.example to .env and paste OPENROUTER_API_KEY=...
+# 2. (Optional, Windows — offline voice) downloads Piper + English Amy ONNX voice
+install_voice.bat
 
-# 3. Wake her up
+# 3. Add your OpenRouter key (get one at openrouter.ai/keys)
+#    copy .env.example → .env, paste:
+#      OPENROUTER_API_KEY=sk-or-v1-...
+
+# 4. Wake her up
 python zoey.py
 ```
 
-That's it. The terminal shows the **Dream Visualizer** (memory consolidation animation), then opens:
-- 🌐 **Chat UI** — http://127.0.0.1:8765
-- 💻 **Terminal** — a separate console opens for typed chat + logs
+That's it. Boot flow:
+1. 🌙 **Dream Visualizer** — 28-frame memory-consolidation animation in the terminal
+2. 🔊 **Voice** — Piper offline TTS (or ElevenLabs if you added its key)
+3. 💻 **Terminal agent** — type or speak, runs on main thread (engine.py directly)
+4. 🌐 **Chat UI** — opens automatically at http://127.0.0.1:8765 in parallel
+5. 🧠 **Learning** — confidence-based routing, symbolic + cellular + world-model layers, dream consolidation, persisted brain topology
+
+### 🎙️ Voice install (detail)
+
+| What you want | How |
+|---------------|-----|
+| Best offline voice (free, bundled, Amy-medium) | Run `install_voice.bat` once. Downloads piper.exe + `en_US-amy-medium.onnx` into `piper/`. |
+| Higher-quality cloud voice (ElevenLabs) | Add `ELEVENLABS_API_KEY=` + `ELEVENLABS_VOICE_ID=` in `.env` — Zoey prefers it automatically. |
+| Fallback system voice (0 downloads) | Set `TTS_PROVIDER=pyttsx3` in `.env`. Uses whatever Windows SAPI voice is installed. |
+| Other Piper voices (100+) | Browse https://rhasspy.github.io/piper-samples/ — drop `.onnx` + `.onnx.json` in `piper/` and set `PIPER_MODEL=./piper/your_voice.onnx` in `.env`. |
 
 ---
 
