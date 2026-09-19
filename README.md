@@ -9,6 +9,8 @@
 
 ---
 
+video=https://www.instagram.com/p/Ddd7HTWPP1i/
+
 ## ⚡ Quick Start
 
 ```bash
